@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script
+        src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous">
+    </script>
+    <script src="convert.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Jinja2 live parser</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="http://jinja.quantprogramming.com/">Jinja2 live parser</a>
+    </nav>
+    <form class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Template</h2>
+                <textarea id="template"></textarea>
+            </div>
+            <div class="col-md-6">
+                <h2>Render</h2>
+                <textarea id="render" disabled></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Values (YAML)</h2>
+                <textarea id="values"></textarea>
+            </div>
+            <div class="col-md-6">
+                <h2>Settings</h2>
+                <div id="settings">
+                    <label><input type="checkbox" name="showws" id="showws" checked="checked" />Show whitespace</label><br/>
+                    <input type="button" class="btn btn-danger" id="convert" value="Render" />
+                    <input type="button" class="btn btn-primary" id="clear" value="Defaults" />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
